@@ -1,0 +1,505 @@
+.section__content{
+    height: 100vh;
+
+    position: relative;
+
+
+    .content{
+        padding-top: 150px;
+
+        @media (max-width: $breakpoint1200) {
+            padding-top: 100px;
+         }
+         
+         @media (max-width: $breakpoint992) {
+            padding-top: 60px;
+         }
+
+         @media (max-width: $breakpoint770) {
+            padding-top: 0px;
+            margin-top: -5px;
+         }
+
+
+        &__fon{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+
+
+        }
+
+        &__zdanie{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        &__fon2{
+            display: none;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -3;
+            width: 100%;
+            height: 100vh;
+            z-index: -2;
+
+            @media (max-width: $breakpoint992) {
+                display: none;
+                z-index: -2;
+            }
+
+            @media (max-width: $breakpoint480) {
+                display: block;
+                z-index: -2;
+            }
+        }
+
+        &__blur{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            max-width: 100%;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.3;
+
+            mask-image: linear-gradient(to bottom, transparent 10%, white);
+
+            @media (max-width: $breakpoint770) {
+                height: 50vh;
+                top: 50%;
+                width: 100%;
+            }
+
+            @media (max-width: $breakpoint770) {
+                display: none;
+            }
+
+        }
+
+        &__flur{
+            display: none;
+
+            width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: -2;
+
+            @media (max-width: $breakpoint770) {
+                display: block;
+            }
+
+        }
+
+        &__women{
+            position: absolute;
+            top: 50%; left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+            height: 100vh;
+            bottom: 0;
+            z-index: 1;
+
+            filter: drop-shadow( 40px -5px 15px rgba(0, 0, 0, 0.265));
+
+            @media (max-width: $breakpoint1200) {
+                height: 90vh;
+                top: 55%;
+            }
+
+            @media (max-width: $breakpoint992) {
+                height: 60vh;
+                top: 45%;
+            }
+
+            @media (max-width: $breakpoint480) {
+                height: 48vh;
+                top: 38%;
+            }
+
+            @media (max-width: $breakpoint400) {
+                height: 50vh;
+                top: 42%;
+            }
+        }
+
+        &__monetka{
+            position: absolute;
+            top: 20%;
+            left: 0;
+            z-index: 1;
+
+            @media (max-width: $breakpoint1450) {
+                z-index: 1;
+                width: 220px;
+                top: 25%;
+            }
+
+            @media (max-width: $breakpoint1200) {
+                width: 200px;
+                top: 20%;
+            }
+
+            @media (max-width: $breakpoint480) {
+                width: 240px;
+                top: 20%;
+                z-index: 1;
+            }
+
+            @media (max-width: $breakpoint380) {
+               width: 210px;
+            }
+        }
+
+        &__monetka2{
+           position: absolute;
+           top: 0;
+           right: 0;
+
+           @media (max-width: $breakpoint1200) {
+            width: 120px;
+         }
+
+         @media (max-width: $breakpoint770) {
+            display: none;
+         }
+        }
+
+        &__almaz{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+
+            @media (max-width: $breakpoint992) {
+                top: 35%;
+                width: 250px;
+                right: 5px;
+                transform: rotate(630deg);
+             }
+
+             @media (max-width: $breakpoint770) {
+                width: 100%;
+                max-width: 200px;
+                z-index: 1;
+            }
+         }
+
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            @media (max-width: $breakpoint770) {
+                flex-direction: column-reverse;
+                align-items: center;
+             }
+
+            &-item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &-fl{
+                    display: flex;
+                    justify-content: center;
+
+                    &-text{
+                        
+                        margin: 0px 11px;
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 27px;
+                        text-align: center;
+                        color: #000000;
+
+                        @media (max-width: $breakpoint1200) {
+                           font-size: 17px;
+                        }
+
+                        @media (max-width: $breakpoint770) {
+                            font-size: 15px;
+                            line-height: 20px;
+                            margin-top: 5px;
+                         }
+                        
+                    }
+
+                }
+
+                &-title{
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 200;
+                    font-size: 60px;
+                    line-height: 82px;
+                    text-align: center;
+                    text-transform: uppercase;   
+                    color: #000000;   
+                    
+                    @media (max-width: $breakpoint1200) {
+                        font-size: 40px;
+                        line-height: 140%;
+                     }
+
+                     @media (max-width: $breakpoint770) {
+                        font-size: 33px;
+                        line-height: 50px;
+                     }
+                }
+
+            }
+
+            &-item2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                padding: 11px 35px;
+                background: rgba(95, 155, 255, 0.1);
+                border: 1px solid #92BBFF;
+                border-radius: 10px;
+
+                @media (max-width: $breakpoint770) {
+                    padding: 15px 32px;
+                 }
+
+                &-icon{
+                    width: 55px;
+                    margin-right: 15px;
+
+                    @media (max-width: $breakpoint770) {
+                        width: 35px;
+                        margin-right: 10px;
+                     }
+                }
+
+                &-titles{
+
+                    display: flex;
+                    flex-direction: column;
+
+                    &-title{
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 27px;
+                        
+                        color: #000000;
+
+                        @media (max-width: $breakpoint992) {
+                            font-size: 18px;
+                         }
+
+                         @media (max-width: $breakpoint770) {
+                            font-size: 12px;
+                            line-height: 15px;
+                         }
+                    }
+
+                    &-subtitle{
+                        font-family: 'Manrope';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 27px;
+                        
+                        color: #000000;
+
+                        @media (max-width: $breakpoint992) {
+                            font-size: 18px;
+                         }
+                          
+                         @media (max-width: $breakpoint770) {
+                            font-size: 12px;
+                            line-height: 15px;
+                         }
+                    }
+
+                }
+            }
+
+
+        }
+
+        &__title{
+
+            margin-top: 30px;
+            font-family: 'Steelfish';
+             
+
+        
+            font-style: normal;
+            font-weight: 700;
+            font-size: 125px;
+            line-height: 110.8%;
+            text-align: center;
+            text-transform: uppercase;
+
+            background: linear-gradient(111.12deg, #000000 1.21%, #949494 27.11%, #000000 53.01%, #949494 75.86%, #000000 98.71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            
+            transform: scaleY(2.5);
+
+            & span {
+                margin-right: 150px;
+
+                @media (max-width: $breakpoint1450) {
+                    margin-right: 77px;
+                 }
+
+                @media (max-width: $breakpoint1200) {
+                    margin-right: 100px;
+                 }
+
+                @media (max-width: $breakpoint992) {
+                    margin-right: 0px;
+                 }
+            }
+
+
+
+
+            @media (max-width: $breakpoint1200) {
+                font-size: 100px;
+            }
+
+            @media (max-width: $breakpoint992) {
+                font-size: 60px;
+             }
+
+             @media (max-width: $breakpoint770) {
+               font-size: 40px;
+               margin-top: 5px;
+             }
+
+             @media (max-width: $breakpoint480) {
+                font-size: 35px;
+            }
+
+
+        }
+
+        &__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 100px;
+
+            @media (max-width: $breakpoint1200) {
+                margin-top: 150px;
+             }
+
+
+            @media (max-width: $breakpoint992) {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 480px;
+             }
+
+             @media (max-width: $breakpoint480) {
+                margin-top: 310px;
+            }
+
+            @media (max-width: $breakpoint380) {
+                margin-top: 240px;
+            }
+              
+
+            &-btn{
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 102.1%;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: #336D66; 
+                
+                z-index: 1;
+                
+                background: radial-gradient(46.62% 104% at 50% 50%, #F1F5FF 0%, #DFFFF9 0%, #16E1C7 100%);
+                box-shadow: 0px 5.72693px 0px #4D988E, inset -4.77244px -4.77244px 9.54488px rgba(137, 132, 132, 0.15), inset 5.72693px 5.72693px 5.72693px rgba(255, 255, 255, 0.25);
+                border-radius: 9.54488px;
+
+
+
+                padding: 48px 88px;
+
+                @media (max-width: $breakpoint992) {
+                    padding: 48px 70px;
+                    margin-bottom: 20px;
+                 }
+
+                 @media (max-width: $breakpoint480) {
+                    padding: 40px 60px;
+                    margin-bottom: 10px;
+                 }
+
+
+
+
+                
+            }
+
+            &-text{
+                max-width: 360px;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 27px;  
+                color: #000000;
+                z-index: 1;
+
+                @media (max-width: $breakpoint992) {
+                    font-size: 18px;
+                 }
+
+                 @media (max-width: $breakpoint770) {
+                    font-size: 15px;
+                    line-height: 20px;
+                 }
+
+                 @media (max-width: $breakpoint480) {
+                    font-size: 13px;
+                 }
+
+                & span { 
+                font-weight: 700;
+
+                }
+            }
+
+        }
+
+    }
+
+}
